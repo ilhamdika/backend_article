@@ -4,8 +4,9 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"time"
 
-	"backend_article/models" // Impor model dengan benar
+	"backend_article/models"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"github.com/joho/godotenv"
@@ -27,15 +28,26 @@ func ConnectDatabase() {
 		os.Getenv("DB_NAME"),
 	)
 
-	database, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+	var database *gorm.DB
+	for i := 0; i < 3; i++ {
+		database, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
+		if err == nil {
+			break
+		}
+		log.Println("Gagal menghubungkan ke database:", err)
+		log.Println("Mencoba kembali dalam 3 detik")
+		time.Sleep(3 * time.Second)
+	}
+
 	if err != nil {
-		log.Fatal("Failed to connect to database:", err)
+		log.Fatal("Gagal menghubungkan ke database setelah beberapa kali percobaan:", err)
 	}
 
 	err = database.AutoMigrate(&models.Post{})
 	if err != nil {
-		log.Fatal("Failed to migrate database:", err)
+		log.Fatal("Gagal melakukan migrasi database:", err)
 	}
 
 	DB = database
+	log.Println("Berhasil terhubung ke database!")
 }
