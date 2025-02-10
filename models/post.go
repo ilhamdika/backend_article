@@ -11,5 +11,5 @@ type Post struct {
 	Category    string    `gorm:"type:varchar(100);not null"`
 	CreatedDate time.Time `gorm:"type:timestamp;default:CURRENT_TIMESTAMP"`
 	UpdatedDate time.Time `gorm:"type:timestamp;default:CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"`
-	Status      string    `gorm:"type:enum('Publish','Draft','Thrash');not null"`
+	Status      string    `gorm:"type:enum('publish','draft','thrash');not null"`
 }
