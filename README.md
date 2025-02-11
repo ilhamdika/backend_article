@@ -22,6 +22,10 @@ cd backend-article
 
 Lalu .env.example bisa di copy ke .env dan disitu ada dua Jika menggunakan local, Jika menggunakan docker, tinggal sesuaikan saja untuk sesuai dengan kemauan
 
+note: buat databasenya terlebih dahulu
+
+lalu tinggal sesuaikan namanya seperti di .env
+
 ---
 
 ### 2️⃣ **Install Dependensi**
