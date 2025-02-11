@@ -16,7 +16,7 @@ Sebelum menjalankan aplikasi, pastikan Anda sudah menginstal:
 Jika Anda belum memiliki kode sumber, unduh dengan perintah berikut:
 
 ```sh
-git clone https://github.com/username/backend_article.git
+git clone https://github.com/ilhamdika/backend_article.git
 cd backend-article
 ```
 
