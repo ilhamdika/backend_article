@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "1f059aaa-7565-45f6-8eec-34ff3073f21c",
+		"name": "Backend Article",
+		"description": "Dokumentasi Backend artikel\n\ndan berisi beberapa endpoint di dalamnya, dan berikut adalah isi endpointnya",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26658030"
+	},
+	"item": [
+		{
+			"name": "Article create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"testtesttesttesttesttesttesttesttesttesttest\",\r\n    \"content\": \"testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest\",\r\n    \"category\": \"Tech\",\r\n    \"status\": \"publish\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/article",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"article"
+					]
+				},
+				"description": "Post Article create adalah endpoint untuk input data"
+			},
+			"response": []
+		},
+		{
+			"name": "Article list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/articles/10/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"articles",
+						"10",
+						"0"
+					]
+				},
+				"description": "Article list adalah endpoint untuk get data list artikel\n\n[http://localhost:8080/articles/:limit/:offset](http://localhost:8080/articles/:limit/:offset)\n\nitu adalah untuk mengatur limit dan offset"
+			},
+			"response": []
+		},
+		{
+			"name": "Article by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Untuk mendapatkan artikel sesuai idnya"
+			},
+			"response": []
+		},
+		{
+			"name": "Article update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Artikel terbaru terkini dan terupdate new\",\r\n    \"content\": \"Artikel terbaru terkini dan terupdate new Artikel terbaru terkini dan terupdate new Artikel terbaru terkini dan terupdate new Artikel terbaru terkini dan terupdate new Artikel terbaru terkini dan terupdate new Artikel terbaru terkini dan terupdate new\",\r\n    \"category\": \"Tech\",\r\n    \"status\": \"publish\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/article/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"article",
+						"1"
+					]
+				},
+				"description": "Article update yaitu untuk mengupdate artikel sesuai dengan parameter idnya"
+			},
+			"response": []
+		},
+		{
+			"name": "Article delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/article/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"article",
+						"1"
+					]
+				},
+				"description": "Article delete yaitu untuk menghapus artikel sesuai dengan parameter idnya"
+			},
+			"response": []
+		}
+	]
+}

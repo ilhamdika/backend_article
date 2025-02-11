@@ -66,4 +66,13 @@ karena ini berjalan di port 8080. atau mungkin bila anda ingin menggunakan docke
 
 ---
 
+### 📥 Import Koleksi ke Postman
+
+Jika ingin menggunakan API secara lokal, unduh file koleksi dan impor ke Postman:
+
+**\*Backend Article.postman_collection.json**
+lalu import ke postman
+
+---
+
 Terima kasih atas kunjungan Anda!
